@@ -7,5 +7,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <img alt="Silhouette of mountains" src="https://1.bp.blogspot.com/-V20ZHfs6EMA/XP_1gNhorcI/AAAAAAAATLc/N5RrvgMJwkUCF1XBAsV3jyNq0K7odT3vACLcBGAs/s1600/CARA-COROA-QUAL-LADO-MOEDA-JOGO-ONLINE-INGLES-ESPANHOL-PAIS.png" />
+  <div class="container-coin" >
+    <img [src]="image" alt="">
+    <h1>{{info}}</h1>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="dark" class="btn">
+    <ion-title class="ion-text-center">jogar moeda!</ion-title>
+  </ion-toolbar>
+</ion-footer>
