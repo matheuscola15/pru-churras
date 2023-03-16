@@ -7,6 +7,22 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  valendo = 1
+
+  pontuacao1 = 0
+
+  pontuacao2 = 0
+
   constructor() {}
+
+  contador(valor: number){
+    this.valendo = valor;
+  }
+
+  somartento(){
+    this.valendo
+  }
+
+
 
 }

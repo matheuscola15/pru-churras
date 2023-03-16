@@ -6,56 +6,78 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="medium">
+
+  <ion-card>
+    <ion-card-title>
+      Marcador de tento
+    </ion-card-title>
+  </ion-card>
 
   <div>
     <div class="text1">
       <ion-label>
-        Valendo 1
+        Valendo:
       </ion-label>
     </div>
     <div class="button">
-      <ion-button>1</ion-button>
-      <ion-button>3</ion-button>
-      <ion-button>6</ion-button>
-      <ion-button>9</ion-button>
-      <ion-button>12</ion-button>
+      <ion-button size="large" (click)="contador">1</ion-button>
+      <ion-button size="large">3</ion-button>
+      <ion-button size="large">6</ion-button>
+      <ion-button size="large">9</ion-button>
+      <ion-button size="large">12</ion-button>
     </div>
     <div class="button2">
       <div>
         <ion-label>
           Time 1
         </ion-label>
-        <ion-button>+</ion-button>
-        <ion-label>
+        <ion-button size="large">+</ion-button>
+        <ion-chip>
           0
-        </ion-label>
-        <ion-button>-</ion-button>
+        </ion-chip>
+        <ion-button size="large">-</ion-button>
       </div>
       <div>
         <ion-label>
           Time 2
         </ion-label>
-        <ion-button>+</ion-button>
-        <ion-label>
+        <ion-button size="large">+</ion-button>
+        <ion-chip>
           0
-        </ion-label>
-        <ion-button>-</ion-button>
+        </ion-chip>
+        <ion-button size="large">-</ion-button>
       </div>
     </div>
 
     <div class="div-bottom">
       <div class="result">
-        <ion-label>Partidas</ion-label>
-        <ion-label>Time 1</ion-label>
-        <ion-label>Time 2</ion-label>
+        <ion-title>
+          Partidas
+        </ion-title>
+        <ion-chip>
+          <ion-avatar>
+            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label>Time 1</ion-label>
+        </ion-chip>
+        <ion-chip>
+          <ion-avatar>
+            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label>Time 2</ion-label>
+        </ion-chip>
       </div>
       <div class="result2">
-        <ion-label>0</ion-label>
-        <ion-label>0</ion-label>
+        <ion-chip>
+          0
+        </ion-chip>
+        <ion-chip>
+          0
+        </ion-chip>
       </div>
     </div>
-    <ion-button>
+    <ion-button size="medium">
       Limpar
     </ion-button>
   </div>
