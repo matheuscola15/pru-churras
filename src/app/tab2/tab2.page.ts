@@ -21,6 +21,9 @@ export class Tab2Page {
 
   somatento1(){
     this.pontos1 += this.valendo
+    if(this.pontos1 === 11){
+      alert("Mão de 11 para o time 1!")
+    }
     if(this.pontos1 >= 12){
       alert("Time 1 venceu!")
       this.time1 += 1
@@ -32,6 +35,9 @@ export class Tab2Page {
 
   somatento2(){
     this.pontos2 += this.valendo
+    if(this.pontos2 === 11){
+      alert("Mão de 11 para o time 2!")
+    }
     if(this.pontos2 >= 12){
       alert("Time 2 venceu!")
       this.time2 += 1
