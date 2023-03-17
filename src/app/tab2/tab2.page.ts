@@ -9,19 +9,63 @@ export class Tab2Page {
 
   valendo = 1
 
-  pontuacao1 = 0
+  pontos1 = 0
+  pontos2 = 0
 
-  pontuacao2 = 0
+  time1 = 0
+  time2 = 0
 
-  constructor() {}
-
-  contador(valor: number){
-    this.valendo = valor;
+  mudartento (valor:number) {
+    this.valendo = valor
   }
 
-  somartento(){
-    this.valendo
+  somatento1(){
+    this.pontos1 += this.valendo
+    if(this.pontos1 >= 12){
+      alert("Time 1 venceu!")
+      this.time1 += 1
+      this.pontos1 = 0
+      this.pontos2 = 0
+      this.valendo = 1;
+    }
   }
+
+  somatento2(){
+    this.pontos2 += this.valendo
+    if(this.pontos2 >= 12){
+      alert("Time 2 venceu!")
+      this.time2 += 1
+      this.pontos1 = 0
+      this.pontos2 = 0
+      this.valendo = 1;
+    }
+  }
+
+  diminuitento1(){
+    this.pontos1 -= this.valendo
+    if(this.pontos1 <= 0){
+      this.pontos1 = 0
+    }
+  }
+
+  diminuitento2(){
+    this.pontos2 -= this.valendo
+    if(this.pontos2 <= 0){
+      this.pontos2 = 0
+    }
+  }
+
+  clear(){
+    this.valendo = 1
+    this.pontos1 = 0
+    this.pontos2 = 0
+    this.time1 = 0
+    this.time2 = 0
+  }
+
+
+
+
 
 
 

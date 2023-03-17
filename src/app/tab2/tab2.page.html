@@ -17,36 +17,36 @@
   <div>
     <div class="text1">
       <ion-label>
-        Valendo:
+        Valendo: {{ valendo }}
       </ion-label>
     </div>
     <div class="button">
-      <ion-button size="large" (click)="contador">1</ion-button>
-      <ion-button size="large">3</ion-button>
-      <ion-button size="large">6</ion-button>
-      <ion-button size="large">9</ion-button>
-      <ion-button size="large">12</ion-button>
+      <ion-button size="large" (click)="mudartento(1)">1</ion-button>
+      <ion-button size="large" (click)="mudartento(3)">3</ion-button>
+      <ion-button size="large" (click)="mudartento(6)">6</ion-button>
+      <ion-button size="large" (click)="mudartento(9)">9</ion-button>
+      <ion-button size="large" (click)="mudartento(12)">12</ion-button>
     </div>
     <div class="button2">
       <div>
         <ion-label>
           Time 1
         </ion-label>
-        <ion-button size="large">+</ion-button>
+        <ion-button size="large" (click)="somatento1()">+</ion-button>
         <ion-chip>
-          0
+          {{ pontos1 }}
         </ion-chip>
-        <ion-button size="large">-</ion-button>
+        <ion-button size="large" (click)="diminuitento1()">-</ion-button>
       </div>
       <div>
         <ion-label>
           Time 2
         </ion-label>
-        <ion-button size="large">+</ion-button>
+        <ion-button size="large" (click)="somatento2()">+</ion-button>
         <ion-chip>
-          0
+          {{ pontos2 }}
         </ion-chip>
-        <ion-button size="large">-</ion-button>
+        <ion-button size="large" (click)="diminuitento2()">-</ion-button>
       </div>
     </div>
 
@@ -70,14 +70,14 @@
       </div>
       <div class="result2">
         <ion-chip>
-          0
+          {{ time1 }}
         </ion-chip>
         <ion-chip>
-          0
+          {{ time2 }}
         </ion-chip>
       </div>
     </div>
-    <ion-button size="medium">
+    <ion-button size="medium" (click)="clear()">
       Limpar
     </ion-button>
   </div>
