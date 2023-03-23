@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -22,10 +23,10 @@ export class Tab2Page {
   somatento1(){
     this.pontos1 += this.valendo
     if(this.pontos1 === 11){
-      alert("Mão de 11 para o time 1!")
+      this.presentAlert();
     }
     if(this.pontos1 >= 12){
-      alert("Time 1 venceu!")
+      this.presentAlert3();
       this.time1 += 1
       this.pontos1 = 0
       this.pontos2 = 0
@@ -36,10 +37,10 @@ export class Tab2Page {
   somatento2(){
     this.pontos2 += this.valendo
     if(this.pontos2 === 11){
-      alert("Mão de 11 para o time 2!")
+      this.presentAlert2();
     }
     if(this.pontos2 >= 12){
-      alert("Time 2 venceu!")
+      this.presentAlert4();
       this.time2 += 1
       this.pontos1 = 0
       this.pontos2 = 0
@@ -67,6 +68,57 @@ export class Tab2Page {
     this.pontos2 = 0
     this.time1 = 0
     this.time2 = 0
+  }
+
+
+  constructor(private alertController: AlertController) {}
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Cuidado!',
+      subHeader: 'O Time 1 está de mão de 11!',
+      message: 'Eles podem ver as cartas!',
+      buttons: ['OK'],
+      cssClass: 'custom-alert'
+    });
+
+    await alert.present();
+  }
+
+  async presentAlert2() {
+    const alert = await this.alertController.create({
+      header: 'Cuidado!',
+      subHeader: 'O Time 2 está de mão de 11!',
+      message: 'Eles podem ver as cartas!',
+      buttons: ['OK'],
+      cssClass: 'custom-alert'
+    });
+
+    await alert.present();
+  }
+
+  async presentAlert3() {
+    const alert = await this.alertController.create({
+      header: 'TIME 1 VENCEU!',
+      subHeader: 'CHOREM PATOS!',
+      message: 'CLIQUE EM OK PARA INICIAR NOVAMENTE!',
+      buttons: ['OK'],
+      cssClass: 'custom-alert'
+    });
+
+    await alert.present();
+  }
+
+  async presentAlert4() {
+    const alert = await this.alertController.create({
+      header: 'TIME 2 VENCEU!',
+      subHeader: 'CHOREM PATOS!',
+      message: 'CLIQUE EM OK PARA INICIAR NOVAMENTE!',
+      buttons: ['OK'],
+      cssClass: 'custom-alert'
+    });
+
+    await alert.present();
   }
 
 
