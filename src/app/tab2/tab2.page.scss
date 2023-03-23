@@ -3,6 +3,11 @@
   justify-content: space-around;
   align-items: center;
   flex-flow: row;
+
+}
+
+ion-toolbar{
+  text-align: center;
 }
 
 .button2{
@@ -24,7 +29,7 @@
   justify-content: space-around;
   flex-flow: column;
   margin-left: 20px;
-  text-align: start;
+  text-align: end;
 }
 .result2{
   display: flex;
@@ -43,17 +48,23 @@
 }
 
 ion-button{
-  --background: #00581b;
-  --border-color: #fff;
+  --background: #cfcfcf;
+  color: #000000;
 }
 
 ion-chip {
-  --background: #00581b;
-  color: #fff;
+  --background: #cfcfcf;
+  --color: #000;
 }
 
 ion-card-title{
   text-align: center;
-  background-color: #00581b;
-  color: #fff;
+  background-color: #cfcfcf;
+  color: #000000;
+}
+
+.clear{
+  margin-left: 20px;
+  margin-right: 20px;
+
 }

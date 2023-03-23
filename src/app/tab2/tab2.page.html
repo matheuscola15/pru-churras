@@ -1,25 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      TRUCO!
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="medium">
+<ion-content [fullscreen]="true" color="favorite">
 
   <ion-card>
     <ion-card-title>
-      Marcador de tento
+      MARCADOR DE TENTO!
     </ion-card-title>
   </ion-card>
 
   <div>
     <div class="text1">
-      <ion-label>
+      <ion-chip>
         Valendo: {{ valendo }}
-      </ion-label>
+      </ion-chip>
     </div>
+
     <div class="button">
       <ion-button size="large" (click)="mudartento(1)">1</ion-button>
       <ion-button size="large" (click)="mudartento(3)">3</ion-button>
@@ -29,43 +30,43 @@
     </div>
     <div class="button2">
       <div>
-        <ion-label>
-          Time 1
-        </ion-label>
-        <ion-button size="large" (click)="somatento1()">+</ion-button>
         <ion-chip>
-          {{ pontos1 }}
+          Time 1 (NÓS)
         </ion-chip>
-        <ion-button size="large" (click)="diminuitento1()">-</ion-button>
+        <ion-button size="large" (click)="somatento1()" size="medium">+</ion-button>
+        <ion-chip>
+          PONTOS: {{ pontos1 }}
+        </ion-chip>
+        <ion-button size="large" (click)="diminuitento1()" size="medium">-</ion-button>
       </div>
       <div>
-        <ion-label>
-          Time 2
-        </ion-label>
-        <ion-button size="large" (click)="somatento2()">+</ion-button>
         <ion-chip>
-          {{ pontos2 }}
+          Time 2 (ELES)
         </ion-chip>
-        <ion-button size="large" (click)="diminuitento2()">-</ion-button>
+        <ion-button size="large" (click)="somatento2()" size="medium">+</ion-button>
+        <ion-chip>
+          PONTOS: {{ pontos2 }}
+        </ion-chip>
+        <ion-button size="large" (click)="diminuitento2()" size="medium">-</ion-button>
       </div>
     </div>
 
     <div class="div-bottom">
       <div class="result">
         <ion-title>
-          Partidas
+          PARTIDAS
         </ion-title>
         <ion-chip>
           <ion-avatar>
             <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
           </ion-avatar>
-          <ion-label>Time 1</ion-label>
+          <ion-label>Time 1 (NÓS)</ion-label>
         </ion-chip>
         <ion-chip>
           <ion-avatar>
             <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
           </ion-avatar>
-          <ion-label>Time 2</ion-label>
+          <ion-label>Time 2 (ELES)</ion-label>
         </ion-chip>
       </div>
       <div class="result2">
@@ -77,8 +78,8 @@
         </ion-chip>
       </div>
     </div>
-    <ion-button size="medium" (click)="clear()">
-      Limpar
+    <ion-button size="medium" (click)="clear()" class="clear">
+      LIMPAR PLACAR
     </ion-button>
   </div>
 
